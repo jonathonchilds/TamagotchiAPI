@@ -17,8 +17,6 @@ namespace TamagotchiAPI.Controllers
     [ApiController]
     public class PetController : ControllerBase
     {
-
-
         // This is the variable you use to have access to your database
         private readonly DatabaseContext _context;
 
@@ -65,7 +63,7 @@ namespace TamagotchiAPI.Controllers
         }
 
         // PUT: api/Pet/5
-        //
+        // 
         // Update an individual pet with the requested id. The id is specified in the URL
         // In the sample URL above it is the `5`. The "{id} in the [HttpPut("{id}")] is what tells dotnet
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
@@ -127,13 +125,42 @@ namespace TamagotchiAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Pet>> PostPet(Pet pet)
         {
-            // Indicate to the database context we want to add this new record
+
             _context.Pets.Add(pet);
             await _context.SaveChangesAsync();
 
             // Return a response that indicates the object was created (status code `201`) and some additional
             // headers with details of the newly created object.
             return CreatedAtAction("GetPet", new { id = pet.Id }, pet);
+        }
+
+        [HttpPost("{id}/Playtimes")]
+        public async Task<ActionResult<Pet>> Playtime(int id)
+        {
+            var petToAddPlaytime = await _context.Pets.FindAsync(id);
+            var newPlaytime = new Playtime();
+
+            if (petToAddPlaytime == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                newPlaytime.Id = id;
+
+                petToAddPlaytime.HappinessLevel += 5;
+                petToAddPlaytime.HungerLevel += 3;
+            }
+
+            await _context.SaveChangesAsync();
+
+
+            // Return a response that indicates the object was created (status code `201`) and some additional
+            // headers with details of the newly created object.
+            return CreatedAtAction("GetPet", new { Id = petToAddPlaytime.Id }, petToAddPlaytime);
+            //return CreatedAtAction("GetPlaytime", new { Id = newPlaytime.Id }, newPlaytime);
+
+
         }
 
         // DELETE: api/Pet/5
