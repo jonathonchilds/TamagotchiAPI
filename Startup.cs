@@ -5,9 +5,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using TamagotchiAPI.Models;
+using John_Smith_Movies_Watched_2021_API.Models;
 
-namespace TamagotchiAPI
+namespace John_Smith_Movies_Watched_2021_API
 {
     public class Startup
     {
@@ -33,7 +33,7 @@ namespace TamagotchiAPI
             // Configure the Swagger documentation engine to generate documentation for our API
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TamagotchiAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "John_Smith_Movies_Watched_2021_API", Version = "v1" });
             });
 
             // Configure the class to use for a DatabaseContext
@@ -75,7 +75,7 @@ namespace TamagotchiAPI
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TamagotchiAPI");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "John_Smith_Movies_Watched_2021_API");
                 c.RoutePrefix = String.Empty;
             });
 

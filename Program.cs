@@ -2,8 +2,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TamagotchiAPI.Models;
-using TamagotchiAPI.Utils;
+using John_Smith_Movies_Watched_2021_API.Models;
+using John_Smith_Movies_Watched_2021_API.Utils;
 
 namespace TamagotchiAPI
 {

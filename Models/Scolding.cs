@@ -1,6 +1,6 @@
 using System;
 
-namespace TamagotchiAPI.Models
+namespace John_Smith_Movies_Watched_2021_API.Models
 {
     public class Scolding
     {

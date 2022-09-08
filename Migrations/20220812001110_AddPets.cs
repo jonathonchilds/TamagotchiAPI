@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace TamagotchiAPI.Migrations
+namespace John_Smith_Movies_Watched_2021_API.Migrations
 {
     public partial class AddPets : Migration
     {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
-namespace TamagotchiAPI.Utils
+namespace John_Smith_Movies_Watched_2021_API.Utils
 {
     public class Utilities
     {
@@ -71,7 +71,7 @@ namespace TamagotchiAPI.Utils
                     StartInfo = new ProcessStartInfo
                     {
                         FileName = "sdg",
-                        Arguments = $"toast \"{message}\" \"TamagotchiAPI\"",
+                        Arguments = $"toast \"{message}\" \"John_Smith_Movies_Watched_2021_API\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,
                         UseShellExecute = false,

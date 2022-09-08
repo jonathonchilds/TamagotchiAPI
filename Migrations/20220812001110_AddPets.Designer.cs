@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using TamagotchiAPI.Models;
+using John_Smith_Movies_Watched_2021_API.Models;
 
 #nullable disable
 
-namespace TamagotchiAPI.Migrations
+namespace John_Smith_Movies_Watched_2021_API.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
     [Migration("20220812001110_AddPets")]

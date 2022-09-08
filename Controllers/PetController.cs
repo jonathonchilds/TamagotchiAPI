@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TamagotchiAPI;
-using TamagotchiAPI.Models;
+using John_Smith_Movies_Watched_2021_API;
+using John_Smith_Movies_Watched_2021_API.Models;
 
 namespace TamagotchiAPI.Controllers
 {
